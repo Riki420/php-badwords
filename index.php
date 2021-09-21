@@ -1,7 +1,7 @@
 
 <?php 
 
-    $paragraph= "First off, fuck your bitch and the click you claim
+    $paragraph = "First off, fuck your bitch and the click you claim
                 Westside when we ride come equipped with game
                 You claim to be a player but I fucked your wife
                 We bust on Bad Boy niggaz fucked for life
@@ -16,7 +16,9 @@
                 I let them niggaz know it's on for life
                 So let the Westside ride tonight
                 Bad Boy murdered on wax and killed
-                Fuck wit' me and get yo' caps peeled, you know, see"
+                Fuck wit' me and get yo' caps peeled, you know, see";
+
+    $word = $_GET['word'];
 
 ?>
 
@@ -30,8 +32,14 @@
     <title>Bad Words</title>
 </head>
 <body>
+    <!--Get user word-->
+    <form method="GET" action="index.php">
+        <input type="text" name="word">
+    </form>
     <?php 
-    $censoredParagraph = str_replace('fuck', '****', $paragraph);
-    echo $censoredParagraph ?>
+    //string replace to change a userword
+    $censoredParagraph = str_replace($word, '****', $paragraph);
+    echo $censoredParagraph
+     ?>
 </body>
 </html>
