@@ -30,6 +30,8 @@
     <title>Bad Words</title>
 </head>
 <body>
-    <?php echo $paragraph ?>
+    <?php 
+    $censoredParagraph = str_replace('fuck', '****', $paragraph);
+    echo $censoredParagraph ?>
 </body>
 </html>
