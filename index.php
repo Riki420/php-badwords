@@ -30,16 +30,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Words</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <!--Get user word-->
-    <form method="GET" action="index.php">
-        <input type="text" name="word">
-    </form>
-    <?php 
-    //string replace to change a userword
-    $censoredParagraph = str_replace($word, '****', $paragraph);
-    echo $censoredParagraph
-     ?>
+    <div class="container">
+        <!--Get user word-->
+        <form method="GET" action="index.php" >
+            <input type="text" name="word" placeholder="Censor a Word" class="my-form p-4">
+        </form>
+        <h1 class="mt-2">Tupac Hit Em Up</h1>
+        <p class="mt-4">
+            <?php 
+            //string replace to change a userword
+            $censoredParagraph = str_replace($word, '****', $paragraph);
+            echo $censoredParagraph
+            ?>
+        </p>
+    </div>
+    
 </body>
 </html>
